@@ -1,6 +1,9 @@
 {
   "name": "friends-and-family",
   "version": "1.0.0",
+  "engines": {
+    "node": "^10"
+  },
   "description": "The friends and family team project",
   "main": "index.js",
   "author": "Team 2",
@@ -8,5 +11,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client/bitcoin-shopper && npm install && npm build"
+  },
+  "devDependencies": {
+    "nodemon":"^1.18.9"
   }
 }

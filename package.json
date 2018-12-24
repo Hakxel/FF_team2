@@ -1,9 +1,6 @@
 {
   "name": "friends-and-family",
   "version": "1.0.0",
-  "engines": {
-    "node": "^10"
-  },
   "description": "The friends and family team project",
   "main": "index.js",
   "author": "Team 2",

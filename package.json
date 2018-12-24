@@ -14,7 +14,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client/bitcoin-shopper && npm install && npm build"
+    "dev": "nodemon index.js",
+    "heroku-postbuild": "cd client && npm install && npm build"
   },
   "devDependencies": {
     "nodemon":"^1.18.9"

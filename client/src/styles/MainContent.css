@@ -1,0 +1,43 @@
+.main-content {
+  height: 105vh;
+  background-image: url('../images/block-world.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -5.5em;
+  z-index: -1;
+  box-sizing: content-box;
+  display: flex;
+}
+
+.hero {
+  margin-top: 10em;
+  width: 100vw;
+  text-align: center;
+}
+
+.where-to-spend .flex {
+  display: flex;
+}
+
+.spend-search {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.local-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-grow: 1; */
+  background-color: whitesmoke;
+}
+
+.online-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-grow: 1; */
+  background-color: whitesmoke;
+}

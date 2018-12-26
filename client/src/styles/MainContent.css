@@ -11,13 +11,35 @@
 }
 
 .hero {
-  margin-top: 10em;
+  margin-top:5em;
   width: 100vw;
-  text-align: center;
+  text-align: center;  
+  background-color: rgba(7, 23, 247, 0.411);
+}
+
+.hero h1 {
+  margin-top: 0.25em;
+  font-family: 'Iceberg', cursive;
+  color: rgb(247, 145, 28);
+  font-size: 6em;
+}
+
+.hero h2 {
+  font-size: 3em;
+  color: rgb(250, 229, 4);
+  font-weight: 400;
+  font-family: 'Chau Philomene One', sans-serif;
 }
 
 .where-to-spend .flex {
   display: flex;
+}
+
+.where-to-spend h2 {
+  font-family: 'Crimson Text', serif;
+  color: white;
+  font-size: 2em;
+
 }
 
 .spend-search {

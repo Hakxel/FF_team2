@@ -6,18 +6,18 @@ class MainContent extends React.Component {
   constructor() {
    super();
    this.state = {
-     venues: {},
-     onlineStores : {}
+     venues: [],
+     onlineStores : []
    } 
   }
 
   async componentDidMount(){
     let { data } = await axios.get("http://cors-anywhere.herokuapp.com/coinmap.org/api/v1/venues/")
     this.setState({
-      venues: data,
+      venues: data.venues
     })
     console.log(data)
-    // console.log(this.venues)
+    console.log(this.state.venues)
   }
 
   render(){

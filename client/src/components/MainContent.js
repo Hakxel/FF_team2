@@ -6,18 +6,21 @@ class MainContent extends React.Component {
   constructor() {
    super();
    this.state = {
-     venues: [],
-     onlineStores : []
+     products: [],
+     searchOnline: 'Find product online'
    } 
   }
 
   async componentDidMount(){
     let { data } = await axios.get("http://cors-anywhere.herokuapp.com/coinmap.org/api/v1/venues/")
     this.setState({
-      venues: data.venues
+      products: data.venues
     })
-    console.log(data)
-    console.log(this.state.venues)
+    console.log(data);
+  }
+
+  handleChange(event) {
+    this.setState({ searchLocal: event.target.value });
   }
 
   render(){
@@ -32,12 +35,12 @@ class MainContent extends React.Component {
             <h2>Where can I spend bitcoin?</h2>
   
             <div className="spend-menu ui top pointing menu">
-              <a className="active item left">Local stores</a>
+              {/* <a className="active item left">Local stores</a> */}
               <a className="item right">Online stores</a>
             </div>
             <div className="spend-search">
   
-              <div className="local-search">
+              {/* <div className="local-search">
   
                 <div className="ui transparent icon left labeled input">
                   <div className="ui dropdown label">
@@ -53,7 +56,7 @@ class MainContent extends React.Component {
                   <i className="search link icon"></i>
                 </div>
   
-              </div>
+              </div> */}
               
               <div className="online-search">
                 <div className="ui transparent icon input">     

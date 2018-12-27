@@ -1,53 +1,53 @@
 import React from 'react';
 import '../styles/MainContent.css'
+import axios from 'axios';
 
-const MainContent = () => {
-  return (
-    <div className="main-content">
-      <div className="hero">
-        <div>
-        <h1>Bitworld Shopper</h1>
-        <h2>A global currency, a world of possibilities...</h2>
-        </div>
-        <div className="where-to-spend">
-          <h2>Where can I spend bitcoin?</h2>
+class MainContent extends React.Component {
+  constructor() {
+   super();
+   this.state = {
+     products: [],
+     searchValue: ''
+   } 
+  }
+    
+  fetchProductData = async () => {
+  let { data } = await axios.get("http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=" + this.state.searchValue)
+    this.setState({
+      products: data.products
+    })
+  }
 
-          <div className="spend-menu ui top pointing menu">
-            <a className="active item left">Local stores</a>
-            <a className="item right">Online stores</a>
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      searchValue: event.target.elements.test.value
+    })
+    this.fetchProductData();
+    console.log(this.state.searchValue);
+    console.log(this.state.products)
+  }
+
+  render(){
+    return (
+      <div className="main-content">
+        <div className="hero">
+          <div>
+          <h1>Bitworld Shopper</h1>
+          <h2>A global currency, a world of possibilities...</h2>
           </div>
-          <div className="spend-search">
-
-            <div className="local-search">
-
-              <div class="ui transparent icon left labeled input">
-                <div class="ui dropdown label">
-                  <div class="text">City</div>
-                  <i class="dropdown icon"></i>
-                  <div class="menu">
-                    <div class="item">City</div>
-                    <div class="item">State</div>
-                    <div class="item">Country</div>
-                  </div>
-                </div>
-                <input type="text" placeholder="Search..." />
-                  <i class="search link icon"></i>
-              </div>
-
-            </div>
-            
-            <div className="online-search">
-              <div class="ui transparent icon input">         
-                <input type="text" placeholder="Search..." />
-                  <i class="search link icon"></i>
-              </div>
-            </div>
+          <div className="what-to-buy">
+            <h2>What can I buy with bitcoin?</h2>
+            <form className="search-bar ui large fluid action left icon input" onSubmit={this.handleSubmit}>
+              <i className="search icon"></i>
+              <input type="text" placeholder="Search for product..." name="test" />
+              <button className="ui blue button">Search</button>
+            </form>            
           </div>
-          
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default MainContent;

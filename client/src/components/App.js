@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import About from './About';
+// import Search from './Search';
 
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 

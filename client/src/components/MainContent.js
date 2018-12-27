@@ -8,9 +8,9 @@ class MainContent extends React.Component {
    this.state = {
      products: [],
      searchValue: ''
-   } 
+   }
   }
-    
+
   fetchProductData = async () => {
   let { data } = await axios.get("http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=" + this.state.searchValue)
     this.setState({
@@ -42,7 +42,7 @@ class MainContent extends React.Component {
               <i className="search icon"></i>
               <input type="text" placeholder="Search for product..." name="test" />
               <button className="ui blue button">Search</button>
-            </form>            
+            </form>
           </div>
         </div>
       </div>

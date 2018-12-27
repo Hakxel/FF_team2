@@ -29,7 +29,7 @@ const About = () => {
                 <div class='bio-container'>
 
                     <div class="image-header">
-                      <img class='bio-photo' src='Alvaro_Vargas01.jpeg'
+                      <img class='bio-photo' src='./Alvaro_Vargas01.jpeg' alt='Alvaro'
                         width={290}
                         height={300}>
                       </img>
@@ -49,7 +49,7 @@ const About = () => {
                           />
                     </div>
                     <div class='bio'>
-                      <p>Jamie Damon is Full Stack Web Developer with an extensive background in financial services and client engagement. His current technology experience includes work with HTML, CSS, JavaScript, jQuery, and React. His proficiency with GIT facilitates efficient management of web development projects. Current and previous work with teams has led to quality results in a project focused agile development environment.</p>
+                      <p>Jamie Damon is Full Stack Web Developer with an extensive background in financial services and client engagement. His current technology experience includes work with HTML, CSS, JavaScript, jQuery, and React. His knowledge of GIT facilitates efficient management of web development projects. Current and previous work with teams has led to quality results in a project focused agile development environment.</p>
                     </div>
 
                 </div>

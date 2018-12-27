@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Products = (props) => {
+const SearchForm = (props) => {
   return(
     
     <form className="search-bar ui large fluid left icon input" onSubmit={props.handleSubmit}>
@@ -11,4 +11,4 @@ const Products = (props) => {
   )
 }
 
-export default Products
+export default SearchForm

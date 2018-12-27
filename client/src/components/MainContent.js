@@ -1,15 +1,14 @@
 import React from 'react';
 import '../styles/MainContent.css'
 import axios from 'axios';
-import Products from './Products'
+import SearchFrom from './SearchForm'
 
 class MainContent extends React.Component {
   constructor() {
    super();
    this.state = {
      products: [],
-     searchValue: '',
-     value: ''
+     searchValue: ''
    } 
   }
     
@@ -26,6 +25,7 @@ class MainContent extends React.Component {
     this.fetchProductData()
     
     console.log(this.state.searchValue);
+    
   }
   
   handleChange = (event) => {
@@ -45,7 +45,7 @@ class MainContent extends React.Component {
           </div>
           <div className="what-to-buy">
             <h2>What can I buy with bitcoin?</h2>
-            <Products onSubmit={this.handleSubmit} searchValue={this.state.searchValue} value={this.state.value} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>           
+            <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>           
           </div>
         </div>
       </div>

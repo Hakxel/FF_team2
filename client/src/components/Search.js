@@ -1,9 +1,18 @@
 import React from 'react';
 
-const Search = () => {
-  return(
-    <div>Search page</div>
-  )
+class Search extends React.Component {
+  constructor(props) {
+    super()
+    this.state({
+      
+    })
+  }
+
+  render(){
+    return(
+      <div>Search page</div>
+    )
+  }
 }
 
 export default Search;

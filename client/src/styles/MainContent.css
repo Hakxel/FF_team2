@@ -35,31 +35,16 @@
   display: flex;
 }
 
-.where-to-spend h2 {
+.what-to-buy h2 {
   font-family: 'Crimson Text', serif;
   color: white;
   font-size: 2em;
-
-}
-
-.spend-search {
   display: flex;
-  justify-content: space-between;
-  
-}
-
-.local-search {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  /* flex-grow: 1; */
-  background-color: whitesmoke;
+
 }
 
-.online-search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* flex-grow: 1; */
-  background-color: whitesmoke;
+.search-bar {
+  width: 60vw;
+  margin: auto;
 }

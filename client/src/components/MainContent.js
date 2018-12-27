@@ -1,31 +1,38 @@
 import React from 'react';
 import '../styles/MainContent.css'
 import axios from 'axios';
+import Products from './Products'
 
 class MainContent extends React.Component {
   constructor() {
    super();
    this.state = {
      products: [],
-     searchValue: ''
+     searchValue: '',
+     value: ''
    } 
   }
     
   fetchProductData = async () => {
-  let { data } = await axios.get("http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=" + this.state.searchValue)
-    this.setState({
-      products: data.products
-    })
+  let { data } = await axios.get(`http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=${this.state.searchValue}`)
+  this.setState({
+    products: data.products
+  })
+  console.log(this.state.products)
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({
-      searchValue: event.target.elements.test.value
-    })
-    this.fetchProductData();
+    this.fetchProductData()
+    
     console.log(this.state.searchValue);
-    console.log(this.state.products)
+  }
+  
+  handleChange = (event) => {
+    event.preventDefault();
+    this.setState({
+      searchValue: event.target.value
+    })    
   }
 
   render(){
@@ -38,11 +45,7 @@ class MainContent extends React.Component {
           </div>
           <div className="what-to-buy">
             <h2>What can I buy with bitcoin?</h2>
-            <form className="search-bar ui large fluid action left icon input" onSubmit={this.handleSubmit}>
-              <i className="search icon"></i>
-              <input type="text" placeholder="Search for product..." name="test" />
-              <button className="ui blue button">Search</button>
-            </form>            
+            <Products onSubmit={this.handleSubmit} searchValue={this.state.searchValue} value={this.state.value} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>           
           </div>
         </div>
       </div>

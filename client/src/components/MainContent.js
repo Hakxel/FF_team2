@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/MainContent.css'
 import axios from 'axios';
-import SearchFrom from './SearchForm'
+import SearchForm from './SearchForm'
 
 class MainContent extends React.Component {
   constructor() {

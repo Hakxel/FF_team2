@@ -15,7 +15,7 @@ const About = () => {
                 <div class='bio-container'>
 
                     <div class="image-header">
-                      <img class='bio-photo' src='./Asiel_Montes02.jpg' alt='Asiel'
+                      <img class='bio-photo' src='Asiel_Montes02.jpg' alt='Asiel'
                           width={290}
                           height={300}
                         />
@@ -29,7 +29,7 @@ const About = () => {
                 <div class='bio-container'>
 
                     <div class="image-header">
-                      <img class='bio-photo' src='./Alvaro_Vargas01.jpeg' alt='Alvaro'
+                      <img class='bio-photo' src='Alvaro_Vargas01.jpeg' alt='Alvaro'
                         width={290}
                         height={300}>
                       </img>
@@ -43,7 +43,7 @@ const About = () => {
                 <div class='bio-container'>
 
                     <div class="image-header">
-                        <img class='bio-photo' src='./Jamie_Damon01.jpg' alt='Jamie'
+                        <img class='bio-photo' src='Jamie_Damon01.jpg' alt='Jamie'
                             width={290}
                             height={300}
                           />

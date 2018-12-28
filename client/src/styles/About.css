@@ -1,11 +1,11 @@
-body{
+.all-about{
   background-image: url('../../src/images/block-world.jpg');
   background-color: #cccccc;
   font: Arial sans-serif;
   font-size: 20px;
 }
 
-h1{
+.all-about h1{
   display: flex;
   color: ghostwhite;
   justify-content: flex-start;

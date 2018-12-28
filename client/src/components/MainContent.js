@@ -11,9 +11,9 @@ class MainContent extends React.Component {
    this.state = {
      products: false,
      searchValue: ''
-   } 
-  } 
-  
+   }
+  }
+
 
   fetchProductData = async () => {
   let { data } = await axios.get(`http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=${this.state.searchValue}`)

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation'
 import Footer from './Footer'
+import '../styles/SearchResults.css'
 
 class SearchResults extends React.Component {
   constructor(props) {
@@ -14,10 +15,10 @@ class SearchResults extends React.Component {
   render(){
     return(
       <div className="search-results">
-        <div className="results-wrapper">
+        <div>
           <Navigation></Navigation>
         </div>
-        <div>Main search result contents</div>
+        <div className="results-wrapper">Main search result contents</div>
         <div>
           <Footer></Footer>
         </div>

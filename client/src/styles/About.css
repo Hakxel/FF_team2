@@ -1,0 +1,53 @@
+body{
+  background-image: url('../../src/images/block-world.jpg');
+  background-color: #cccccc;
+  font: Arial sans-serif;
+  font-size: 20px;
+}
+
+h1{
+  display: flex;
+  color: ghostwhite;
+  justify-content: flex-start;
+  margin-left: 90px;
+}
+
+#creators{
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.About-Main{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.image-header{
+  display: flex;
+  justify-content: center;
+}
+
+.bio-container{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+
+}
+
+.bio-photo{
+  box-shadow: 10px 10px 5px;
+}
+
+.bio{
+  color: ghostwhite;
+  text-shadow: 2px 2px 4px #000000;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+}

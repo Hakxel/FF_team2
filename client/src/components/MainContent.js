@@ -2,16 +2,19 @@ import React from 'react';
 import '../styles/MainContent.css'
 import axios from 'axios';
 import SearchForm from './SearchForm'
+// import SearchResults from './SearchResults'
+import  {Redirect} from 'react-router-dom';
 
 class MainContent extends React.Component {
   constructor() {
    super();
    this.state = {
-     products: [],
+     products: false,
      searchValue: ''
    } 
-  }
-    
+  } 
+  
+
   fetchProductData = async () => {
   let { data } = await axios.get(`http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=${this.state.searchValue}`)
   this.setState({
@@ -20,19 +23,28 @@ class MainContent extends React.Component {
   console.log(this.state.products)
   }
 
+  
   handleSubmit = (event) => {
     event.preventDefault();
-    this.fetchProductData()
-    
-    console.log(this.state.searchValue);
-    
+    this.fetchProductData();
+    console.log(this.state.searchValue); 
   }
-  
+ 
+
   handleChange = (event) => {
     event.preventDefault();
     this.setState({
       searchValue: event.target.value
     })    
+  }  
+
+  renderResults(){
+    if(this.state.products) {
+      return(
+        <Redirect to="/results" />
+      )
+      
+    }
   }
 
   render(){
@@ -48,6 +60,7 @@ class MainContent extends React.Component {
             <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>           
           </div>
         </div>
+        {this.renderResults()}        
       </div>
     )
   }

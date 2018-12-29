@@ -1,16 +1,29 @@
 import React from 'react';
 import '../styles/MainContent.css'
-import {browserHistory} from 'react-dom'
 
 
 class MainContent extends React.Component {
-  constructor(){
+  constructor(props){
     super()
   }
+
+  searchLocalStores = (event) => {
+    event.preventDefault()
+    this.props.homeProps.history.push('/local-search')
+  }
+  
+  searchOnlineStores = (event) => {
+    event.preventDefault()
+    this.props.homeProps.history.push('/online-search')
+    
+  }
+
+
 
   render(){
     return (
       <div className="main-content">
+        {console.log(this.props)}
         <div className="hero">
           <div>
             <h1>Bitworld Shopper</h1>
@@ -20,8 +33,8 @@ class MainContent extends React.Component {
             <h2>Where can I buy with bitcoin?</h2>
           </div>
           <div className="store-buttons">
-            <button class="local ui button" >Local Stores</button>
-            <button class="online ui button" >Online Stores</button>
+            <button className="local ui button" onClick={ this.searchLocalStores }>Local Stores</button>
+            <button className="online ui button" onClick={ this.searchOnlineStores }>Online Stores</button>
           </div>
         </div>
       </div>

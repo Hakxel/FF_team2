@@ -3,6 +3,10 @@ import '../styles/OnlineSearch.css'
 import axios from 'axios';
 import SearchForm from './SearchForm'
 import SearchResults from './SearchResults';
+import Navigation from './Navigation'
+import Footer from './Footer'
+import '../styles/OnlineSearch.css'
+
 
 class OnlineSearch extends React.Component {
   constructor() {
@@ -21,7 +25,7 @@ class OnlineSearch extends React.Component {
   })
   console.log(this.state.products)
   }
-
+  
   
   handleSubmit = (event) => {
     event.preventDefault();
@@ -40,10 +44,15 @@ class OnlineSearch extends React.Component {
   render(){
     return(
       <div>
-        <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-        {this.state.products.map((product, index) => {
-          return <SearchResults product={product} key={index} />
-        })}   
+        <Navigation />
+        <div className="main-online-search">
+          <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+          {this.state.products.map((product, index) => {
+            return <SearchResults product={product} key={index} />
+          })}   
+
+        </div>
+        <Footer />
       </div>
     )
   }  

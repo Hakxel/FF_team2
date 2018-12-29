@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './Navigation'
-import Footer from './Footer'
+// import Navigation from './Navigation'
+// import Footer from './Footer'
 import '../styles/SearchResults.css'
 
 class SearchResults extends React.Component {

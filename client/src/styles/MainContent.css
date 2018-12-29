@@ -30,20 +30,10 @@
   font-family: 'Chau Philomene One', sans-serif;
 }
 
-.where-to-spend .flex {
-  display: flex;
-}
-
-.what-to-buy h2 {
+.where-to-spend h2 {
   font-family: 'Crimson Text', serif;
   color: white;
   font-size: 2em;
-  display: flex;
   justify-content: center;
-
 }
 
-.search-bar {
-  width: 60vw;
-  margin: auto;
-}

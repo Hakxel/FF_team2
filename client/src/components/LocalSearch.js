@@ -28,7 +28,7 @@ class LocalSearch extends React.Component {
         <Navigation />
         <div className="main-local-search">
         <div>this is where the map should render</div>
-          <MapContainer />
+          <MapContainer venues={this.state.venues} />
         </div>
         <Footer />
       </div>

@@ -2,6 +2,11 @@
   height: 100vh;
 }
 
+#thumbnail {
+  height: 7em;
+  width: 7em;
+}
+
 .product {
   display: flex;
   flex-direction: row;
@@ -27,7 +32,6 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  /* align-items: center; */
   margin-right: 1em;
   margin-left: 1em;
   padding: 1em;
@@ -35,13 +39,7 @@
 }
 
 .product-detail a:hover {
-  color: indigo;
-
-}
-
-#thumbnail {
-  height: 7em;
-  width: 7em;
+  color: blue;
 }
 
 #product-name {
@@ -49,4 +47,12 @@
   text-align: left;
   padding: 1em;
   width: 45em;
+}
+
+#product-name a:link {
+  color: orange;
+}
+
+#product-name a:hover {
+  color: blue;
 }

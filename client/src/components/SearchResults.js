@@ -15,14 +15,15 @@ class SearchResults extends React.Component {
   }
 
   render(){
+
     return(
-      // <div><p>{this.props.product.name}</p></div>
+
         <div className="product">
           <div id="thumbnail">
             <img src={this.props.product.thumbnailURL} alt="photo not available" />
           </div>
           <div id="product-name">
-            <p>{this.props.product.name}</p>
+            <a href={this.props.product.url}><p>{this.props.product.name}</p></a>
           </div>
           <div className="product-detail">
             <p id="product-info">Merchant: {this.props.product.merchantName}</p>
@@ -33,15 +34,4 @@ class SearchResults extends React.Component {
     )
   }
 }
-
 export default SearchResults;
-
-{/* <div className="search-results">
-  <div>
-    <Navigation></Navigation>
-  </div>
-  <div className="results-wrapper"></div>
-  <div>
-    <Footer></Footer>
-  </div>
-</div> */}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import SearchForm from './SearchForm'
 import  {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import SearchResults from './SearchResults';
+import NoResultsFound from './NoResultsFound';
 
 class MainContent extends React.Component {
   constructor() {
@@ -23,20 +24,20 @@ class MainContent extends React.Component {
   console.log(this.state.products)
   }
 
-  
+
   handleSubmit = (event) => {
     event.preventDefault();
     this.fetchProductData();
-    console.log(this.state.searchValue); 
+    console.log(this.state.searchValue);
   }
- 
+
 
   handleChange = (event) => {
     event.preventDefault();
     this.setState({
       searchValue: event.target.value
-    })    
-  }  
+    })
+  }
 
   // renderResults(){
   //   if(this.state.products) {
@@ -46,7 +47,7 @@ class MainContent extends React.Component {
   //         <Redirect to="/results" />
   //       </div>
   //     )
-      
+
   //   }
   // }
 
@@ -63,10 +64,10 @@ class MainContent extends React.Component {
             <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
             {this.state.products.map((product, index) => {
               return <SearchResults product={product} key={index} />
-            })}         
+            })}
           </div>
         </div>
-             
+
       </div>
     )
   }

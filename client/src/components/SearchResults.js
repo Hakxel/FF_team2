@@ -8,8 +8,8 @@ class SearchResults extends React.Component {
     super(props)
     this.state = {
       productsFound: null
-
     }
+
     console.log('this is the props content: ' + props.results)
     console.log('this is the productsFound content: ' + this.state.productsFound)
   }

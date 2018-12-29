@@ -9,6 +9,7 @@ const VenuesMap = withScriptjs(withGoogleMap((props) => {
     key={venue.id}
     venue={venue}
     location={{ lat: venue.lat, lng: venue.lon }}
+    name={venue.name}
   />);
 
   return (

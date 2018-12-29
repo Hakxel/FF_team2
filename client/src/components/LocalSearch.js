@@ -1,10 +1,9 @@
 import React from 'react';
-import '../styles/LocalSearch.css'
 import axios from 'axios';
-import MapComponent from './MapComponent'
+import '../styles/LocalSearch.css'
+import MapContainer from './MapContainer'
 import Navigation from './Navigation'
 import Footer from './Footer'
-import '../styles/LocalSearch.css'
 
 class LocalSearch extends React.Component {
   constructor(){
@@ -23,15 +22,13 @@ class LocalSearch extends React.Component {
     console.log(this.state.venues)
   }
 
-  GOOGLE_MAPS_KEY 
-
   render(){
     return(
       <div>
         <Navigation />
         <div className="main-local-search">
         <div>this is where the map should render</div>
-          <MapComponent />
+          <MapContainer />
         </div>
         <Footer />
       </div>

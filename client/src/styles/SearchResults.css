@@ -1,3 +1,44 @@
 .results-wrapper {
   height: 100vh;
 }
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: orange;
+  background-size: 75%;
+  margin: 1em;
+  border: 0.25em solid orange;
+  box-shadow: 0.25em 0.25em ghostwhite;
+  border-radius: 1em;
+  padding: 1em;
+  color: white;
+  box-sizing: inherit;
+}
+
+.product-detail {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+  margin-left: 1em;
+  height: 10em;
+  width: 40em;
+}
+
+.product-detail a:hover {
+  color: indigo;
+
+}
+
+#thumbnail {
+  height: 6.5em;
+  width: 7em;
+}
+
+#product-name {
+  font-size: 1.25em;
+}

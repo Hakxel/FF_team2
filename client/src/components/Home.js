@@ -8,7 +8,9 @@ const Home = () => {
   return(
     <div className="home">
       <div className="main-wrapper">
-      <Navigation></Navigation>     
+      <Navigation></Navigation>
+      </div>
+      <div>  
       <MainContent></MainContent>
       </div>
       <div>

@@ -8,15 +8,16 @@
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  background-color: orange;
+  background-color: rgb(247, 145, 28);
   background-size: 75%;
   margin: 1em;
-  border: 0.25em solid orange;
+  border: 0.25em solid rgb(247, 145, 28);
   box-shadow: 0.25em 0.25em ghostwhite;
   border-radius: 1em;
   padding: 1em;
   color: white;
   box-sizing: inherit;
+  width: 40em;
 }
 
 .product-detail {

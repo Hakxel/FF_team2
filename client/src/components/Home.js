@@ -8,7 +8,7 @@ const Home = (props) => {
   return(
     <div className="home">
       <div className="main-wrapper">
-      <Navigation></Navigation>     
+      <Navigation></Navigation>
       <MainContent homeProps={props}></MainContent>
       </div>
       <div>

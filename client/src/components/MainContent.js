@@ -11,11 +11,11 @@ class MainContent extends React.Component {
     event.preventDefault()
     this.props.homeProps.history.push('/local-search')
   }
-  
+
   searchOnlineStores = (event) => {
     event.preventDefault()
     this.props.homeProps.history.push('/online-search')
-    
+
   }
 
 
@@ -38,10 +38,9 @@ class MainContent extends React.Component {
           </div>
         </div>
       </div>
-    )  
+    )
 
   }
 }
 
 export default MainContent
-

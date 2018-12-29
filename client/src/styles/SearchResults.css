@@ -1,3 +1,58 @@
 .results-wrapper {
   height: 100vh;
 }
+
+#thumbnail {
+  height: 7em;
+  width: 7em;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: ghostwhite;
+  background-size: 75%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 0.25em solid ghostwhite;
+  box-shadow: 0.25em 0.25em orange;
+  border-radius: 1em;
+  padding: 1em;
+  color: orange;
+  box-sizing: inherit;
+  margin-left: 5em;
+  margin-right: 5em;
+  width: auto;
+}
+
+.product-detail {
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-right: 1em;
+  margin-left: 1em;
+  padding: 1em;
+  width: 30em;
+}
+
+.product-detail a:hover {
+  color: blue;
+}
+
+#product-name {
+  font-size: 1.5em;
+  text-align: left;
+  padding: 1em;
+  width: 45em;
+}
+
+#product-name a:link {
+  color: orange;
+}
+
+#product-name a:hover {
+  color: blue;
+}

@@ -1,8 +1,8 @@
 
 import React from "react";
-import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, InfoBox} from "react-google-maps";
 import VenuesMarker from "./VenuesMarker";
-import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
+
 
 const VenuesMap = withScriptjs(withGoogleMap((props) => {
 
@@ -20,6 +20,7 @@ const VenuesMap = withScriptjs(withGoogleMap((props) => {
     >
 
       {markers}
+
         
     </GoogleMap>
   );

@@ -7,6 +7,7 @@ export default class VenuesMarker extends React.Component {
     return (
       <Marker
         position={this.props.location}
+        title={this.props.name}
       >
       </Marker>
     );

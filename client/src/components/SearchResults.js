@@ -1,7 +1,8 @@
 import React from 'react';
+import '../styles/SearchResults.css';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import '../styles/SearchResults.css';
+
 
 class SearchResults extends React.Component {
   constructor(props) {

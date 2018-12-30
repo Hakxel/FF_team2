@@ -4,5 +4,28 @@
 }
 
 .main-online-search {
-  height: 100vh;
+  height: 100%;
+  background-image: url('../images/bitglobe.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#some-tag h1{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 9vw;
+  text-align: left;
+  color: #E2EEF7;
+  text-shadow: .015em .015em #5AAEED;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#some-tag h2{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  color: #E2EEF7;
+  text-shadow: .025em .025em #5AAEED;
+  margin-left: 5vw;
+  margin-bottom: 1em;
 }

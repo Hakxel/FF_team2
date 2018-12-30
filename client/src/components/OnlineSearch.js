@@ -3,9 +3,10 @@ import '../styles/OnlineSearch.css'
 import axios from 'axios';
 import SearchForm from './SearchForm'
 import SearchResults from './SearchResults';
-import Navigation from './Navigation'
-import Footer from './Footer'
-import '../styles/OnlineSearch.css'
+import Navigation from './Navigation';
+import Footer from './Footer';
+import '../styles/OnlineSearch.css';
+import TextLoop from 'react-text-loop';
 
 
 class OnlineSearch extends React.Component {
@@ -25,36 +26,49 @@ class OnlineSearch extends React.Component {
   })
   console.log(this.state.products)
   }
-  
-  
+
+
   handleSubmit = (event) => {
     event.preventDefault();
     this.fetchProductData();
-    console.log(this.state.searchValue); 
+    console.log(this.state.searchValue);
   }
- 
+
 
   handleChange = (event) => {
     event.preventDefault();
     this.setState({
       searchValue: event.target.value
-    })    
+    })
   }
-  
+
   render(){
     return(
-      <div>
+      <div className='main-online-search'>
         <Navigation />
-        <div className="main-online-search">
-          <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+        <div>
+          <div id='some-tag'>
+            <h1>bitworld buys</h1>
+            <h2>the future of {' '}
+            <TextLoop interval={3000}>
+                <span>global</span>
+                <span>local</span>
+            </TextLoop>
+             {' '}currency. today.
+            </h2>
+          </div>
+          <div>
+            <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+          </div>
+          <div>
           {this.state.products.map((product, index) => {
             return <SearchResults product={product} key={index} />
-          })}   
-
+          })}
+        </div>
         </div>
         <Footer />
       </div>
     )
-  }  
+  }
 }
 export default OnlineSearch;

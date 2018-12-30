@@ -17,11 +17,10 @@
   background-size: 75%;
   margin-top: 1em;
   margin-bottom: 1em;
-  border: 0.25em solid ghostwhite;
-  box-shadow: 0.25em 0.25em orange;
+  box-shadow: 0.25em 0.25em #5AAEED;
   border-radius: 1em;
   padding: 1em;
-  color: orange;
+  color: #46A8F3;
   box-sizing: inherit;
   margin-left: 5em;
   margin-right: 5em;
@@ -36,6 +35,7 @@
   margin-left: 1em;
   padding: 1em;
   width: 30em;
+  color: #46A8F3;
 }
 
 .product-detail a:hover {
@@ -50,7 +50,7 @@
 }
 
 #product-name a:link {
-  color: orange;
+  color: #46A8F3;
 }
 
 #product-name a:hover {

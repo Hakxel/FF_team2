@@ -1,11 +1,11 @@
-body{
+.all-about{
   background-image: url('../../src/images/block-world.jpg');
   background-color: #cccccc;
   font: Arial sans-serif;
   font-size: 20px;
 }
 
-h1{
+.all-about h1{
   display: flex;
   color: ghostwhite;
   justify-content: flex-start;
@@ -14,7 +14,7 @@ h1{
 
 #creators{
   margin-bottom: 50px;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #00000;
 }
 
 .About-Main{
@@ -39,7 +39,9 @@ h1{
 }
 
 .bio-photo{
-  box-shadow: 10px 10px 5px;
+  /* box-shadow: 10px 10px 5px; */
+  box-shadow: 1px 1px 3px 3px;
+  border-radius: 25px;
 }
 
 .bio{
@@ -50,4 +52,11 @@ h1{
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 25px;
+  margin-bottom: 50px;
+  background-color: #2185d0;
+  padding: 10px;
+  border-radius: 25px;
+  /* box-shadow: 10px 10px 5px black; */
+  box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.75);
+  text-align: justify;
 }

@@ -4,12 +4,12 @@ import MainContent from './MainContent';
 import Footer from './Footer';
 
 
-const Home = () => {
+const Home = (props) => {
   return(
     <div className="home">
       <div className="main-wrapper">
-      <Navigation></Navigation>     
-      <MainContent></MainContent>
+      <Navigation></Navigation>
+      <MainContent homeProps={props}></MainContent>
       </div>
       <div>
       <Footer></Footer>

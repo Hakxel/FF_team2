@@ -11,8 +11,11 @@ const About = () => {
           <div className='About-Main'>
 
             <h1 id='creators'>An introduction to our project</h1>
-             <p className='bio'>Virtual currencies like Bitcoin, Ethereum and others are a new and unique way to store value. These crypto-currencies have become increasingly well-known in popular culture, but owners of the currency lack an easy way to search for merchants that accept it. Our application seeks to solve that problem by allowing users to search for products by keyword, rendering a list of merchants where they may use Bitcoin as a method of payment.
+
+           <div className='bio'>
+               <p>Virtual currencies like Bitcoin, Ethereum and others are a new and unique way to store value. These crypto-currencies have become increasingly well-known in popular culture, but owners of the currency lack an easy way to search for merchants that accept it. Our application seeks to solve that problem by allowing users to search for products by keyword, rendering a list of merchants where they may use Bitcoin as a method of payment.
              <a href="https://en.wikipedia.org/wiki/Virtual_currency"> Learn more about virtual currency.</a></p>
+          </div>
 
             <h1 id='creators'>Creators</h1>
 
@@ -55,7 +58,7 @@ const About = () => {
                           />
                     </div>
                     <div className='bio'>
-                      <p>Jamie Damon is a full stack web developer with an extensive background in financial services and client engagement. His current technology experience includes work with HTML, CSS, JavaScript, jQuery, and React. His knowledge of GIT facilitates efficient management of web development projects. Current and previous work with teams has led to quality results in a project focused agile development environment.
+                      <p>Jamie Damon is a full stack web developer with a background in financial services and client engagement. His current technology experience includes work with HTML, CSS, JavaScript, jQuery, and React. Current and previous work with teams has led to quality results in a project focused agile development environment.
                       <a href="http://www.linkedin.com/in/jamieldamon"> Connect with Jamie.</a></p>
                     </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NoResultsFound = (props) => {
+const NoResultsFound = () => {
     return (
         <div>
           <p>No results found</p>

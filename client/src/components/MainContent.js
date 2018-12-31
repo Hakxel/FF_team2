@@ -37,8 +37,8 @@ class MainContent extends React.Component {
             </h2>
           </div>
           <div className="store-buttons">
-            <button className="local ui button" onClick={ this.searchLocalStores }>Shop Local</button>
-            <button className="online ui button" onClick={ this.searchOnlineStores }>Shop Online</button>
+            <button className="local ui button huge" id="turkey" onClick={ this.searchLocalStores }>Shop Local</button>
+            <button className="online ui button huge" id="turkey" onClick={ this.searchOnlineStores }>Shop Online</button>
           </div>
         </div>
       </div>

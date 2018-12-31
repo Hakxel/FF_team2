@@ -7,6 +7,8 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import '../styles/OnlineSearch.css';
 import TextLoop from 'react-text-loop';
+import NoResultsFound from './NoResultsFound';
+import { Alert } from 'react';
 
 
 class OnlineSearch extends React.Component {
@@ -24,7 +26,11 @@ class OnlineSearch extends React.Component {
   this.setState({
     products: data.products
   })
-  console.log(this.state.products)
+  console.log(this.state.products);
+  if (this.state.products==0){
+    console.log('no results returned');
+    return(<NoResultsFound />)
+  }
   }
 
 
@@ -38,7 +44,7 @@ class OnlineSearch extends React.Component {
   handleChange = (event) => {
     event.preventDefault();
     this.setState({
-      searchValue: event.target.value
+      searchValue: event.target.value,
     })
   }
 

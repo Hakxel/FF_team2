@@ -6,9 +6,7 @@ import SearchResults from './SearchResults';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import '../styles/OnlineSearch.css';
-import TextLoop from 'react-text-loop';
 import NoResultsFound from './NoResultsFound';
-import { Alert } from 'react';
 
 
 class OnlineSearch extends React.Component {
@@ -16,7 +14,8 @@ class OnlineSearch extends React.Component {
    super();
    this.state = {
      products: [],
-     searchValue: ''
+     searchValue: '',
+     noResults: false
    }
   }
 
@@ -24,12 +23,15 @@ class OnlineSearch extends React.Component {
   fetchProductData = async () => {
   let { data } = await axios.get(`http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=${this.state.searchValue}`)
   this.setState({
-    products: data.products
+    products: data.products,
+    noResults: false
   })
+  if(data.products.length === 0){
+    this.setState({noResults: true})
+  }
   console.log(this.state.products);
-  if (this.state.products==0){
-    console.log('no results returned');
-    return(<NoResultsFound />)
+  if (Array.isArray(this.state.products) && this.state.products.length === 0){
+    console.log(`no results returned: ${this.state.products.length} and ${this.handleSubmit}`);
   }
   }
 
@@ -55,22 +57,19 @@ class OnlineSearch extends React.Component {
         <div>
           <div id='main-titles'>
             <h1>bitworld buys</h1>
-            <h2>the future of {' '}
-            <TextLoop interval={3000}>
-                <span>global</span>
-                <span>local</span>
-            </TextLoop>
-             {' '}currency. today.
-            </h2>
+            <h2>search products worldwide</h2>
           </div>
           <div>
             <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
           </div>
           <div>
-          {this.state.products.map((product, index) => {
-              return <SearchResults product={product} key={index} />
-          })}
-        </div>
+            {this.state.noResults ? <NoResultsFound /> : null}
+          </div>
+          <div>
+               {this.state.products.map((product, index) => {
+                 return <SearchResults product={product} key={index} />
+               })}
+          </div>
         </div>
         <Footer />
       </div>

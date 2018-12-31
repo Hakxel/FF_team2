@@ -1,17 +1,34 @@
 import React from "react";
 import { Marker, InfoWindow } from "react-google-maps";
+import Geocode from 'react-geocode';
 
 export default class VenuesMarker extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      isOpen: false
+      isOpen: false,
+      address: ""
     }
   }
   onToggleOpen = () => {
     this.setState({
       isOpen: !this.state.isOpen
     })
+    this.getAddress(this.props.location.lat, this.props.location.lng)
+  }
+
+  getAddress = (lat, long) => {
+    Geocode.setApiKey("AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w");
+    Geocode.fromLatLng(lat, long).then(
+      response => {
+        const addressFromGeo = response.results[0].formatted_address;
+        console.log(addressFromGeo);
+        this.setState({ address: addressFromGeo})
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 
   render() {
@@ -24,7 +41,10 @@ export default class VenuesMarker extends React.Component {
       >
       
         {this.state.isOpen && <InfoWindow onCloseClick={this.onToggleOpen}>
-          <div><h4>{this.props.name}</h4></div>
+          <div>
+            <h4>{this.props.name}</h4>
+            <address>{this.state.address}</address>
+          </div>
         </InfoWindow>}
       </Marker>
     );

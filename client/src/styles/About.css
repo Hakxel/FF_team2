@@ -1,5 +1,7 @@
 .all-about{
-  background-image: url('../../src/images/block-world.jpg');
+  /* background-image: url('../../src/images/block-world.jpg'); */
+  background-image: url('../images/bitglobe.jpg');
+  background-repeat: repeat-y;
   background-color: #cccccc;
   font: Arial sans-serif;
   font-size: 20px;
@@ -10,6 +12,10 @@
   color: ghostwhite;
   justify-content: flex-start;
   margin-left: 90px;
+}
+
+.bio a{
+  color: orange;
 }
 
 #creators{
@@ -40,7 +46,7 @@
 
 .bio-photo{
   /* box-shadow: 10px 10px 5px; */
-  box-shadow: 1px 1px 3px 3px;
+  box-shadow: 1px 1px 3px 3px #FFFFFF;
   border-radius: 25px;
 }
 
@@ -57,6 +63,6 @@
   padding: 10px;
   border-radius: 25px;
   /* box-shadow: 10px 10px 5px black; */
-  box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 3px 3px #FFFFFF;
   text-align: justify;
 }

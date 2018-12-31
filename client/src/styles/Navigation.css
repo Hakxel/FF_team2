@@ -13,5 +13,6 @@
 }
 
 #navigation {
-  box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.75)  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.75);
+  font-size: 25px;
 }

@@ -47,7 +47,7 @@ class OnlineSearch extends React.Component {
       <div className='main-online-search'>
         <Navigation />
         <div>
-          <div id='some-tag'>
+          <div id='main-titles'>
             <h1>bitworld buys</h1>
             <h2>the future of {' '}
             <TextLoop interval={3000}>
@@ -62,7 +62,7 @@ class OnlineSearch extends React.Component {
           </div>
           <div>
           {this.state.products.map((product, index) => {
-            return <SearchResults product={product} key={index} />
+              return <SearchResults product={product} key={index} />
           })}
         </div>
         </div>

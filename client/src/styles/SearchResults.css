@@ -14,7 +14,7 @@
   align-items: center;
   align-content: center;
   background-color: ghostwhite;
-  background-size: 75%;
+  background-size: 80vw;
   margin-top: 1em;
   margin-bottom: 1em;
   box-shadow: 0.25em 0.25em #5AAEED;
@@ -24,7 +24,7 @@
   box-sizing: inherit;
   margin-left: 5em;
   margin-right: 5em;
-  width: auto;
+  width: 80%;
 }
 
 .product-detail {

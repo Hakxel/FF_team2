@@ -1,7 +1,5 @@
 import React from 'react';
 import '../styles/SearchResults.css';
-import Navigation from './Navigation';
-import Footer from './Footer';
 
 
 class SearchResults extends React.Component {
@@ -21,7 +19,7 @@ class SearchResults extends React.Component {
 
         <div className="product">
           <div id="thumbnail">
-            <img src={this.props.product.thumbnailURL} alt="photo not available" />
+            <img src={this.props.product.thumbnailURL} alt="not available" />
           </div>
           <div id="product-name">
             <a href={this.props.product.url}><p>{this.props.product.name}</p></a>

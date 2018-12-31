@@ -5,6 +5,7 @@
 
 .main-online-search {
   height: 100%;
+  min-height: 90vh;
   background-image: url('../images/bitglobe.jpg');
   background-size: cover;
   background-repeat: no-repeat;

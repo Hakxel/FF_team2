@@ -6,7 +6,7 @@ class SearchResults extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      productsFound: null
+      productsFound: null,
     }
 
     console.log('this is the props content: ' + props.results)
@@ -17,6 +17,7 @@ class SearchResults extends React.Component {
 
     return(
 
+      <div>
         <div className="product">
           <div id="thumbnail">
             <img src={this.props.product.thumbnailURL} alt="not available" />
@@ -30,6 +31,7 @@ class SearchResults extends React.Component {
             <a href={this.props.product.url} id="product-info">Buy it with Bitcoin!</a>
           </div>
         </div>
+      </div>
     )
   }
 }

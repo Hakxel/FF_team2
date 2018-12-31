@@ -19,7 +19,6 @@ class OnlineSearch extends React.Component {
    }
   }
 
-
   fetchProductData = async () => {
   let { data } = await axios.get(`http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=${this.state.searchValue}`)
   this.setState({
@@ -31,10 +30,9 @@ class OnlineSearch extends React.Component {
   }
   console.log(this.state.products);
   if (Array.isArray(this.state.products) && this.state.products.length === 0){
-    console.log(`no results returned: ${this.state.products.length} and ${this.handleSubmit}`);
+    console.log(`no results returned: ${this.state.products.length}`);
   }
   }
-
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -52,9 +50,9 @@ class OnlineSearch extends React.Component {
 
   render(){
     return(
-      <div className='main-online-search'>
+      <div>
         <Navigation />
-        <div>
+        <div className='main-online-search'>
           <div id='main-titles'>
             <h1>bitworld buys</h1>
             <h2>search products worldwide</h2>

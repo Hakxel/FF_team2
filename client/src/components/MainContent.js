@@ -2,14 +2,14 @@ import React from 'react';
 import '../styles/MainContent.css'
 import axios from 'axios';
 import SearchForm from './SearchForm'
-import SearchResults from './SearchResults'
 import  {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+import SearchResults from './SearchResults';
 
 class MainContent extends React.Component {
   constructor() {
    super();
    this.state = {
-     products: false,
+     products: [],
      searchValue: ''
    }
   }
@@ -38,37 +38,36 @@ class MainContent extends React.Component {
     })    
   }  
 
-  renderResults(){
-    if(this.state.products) {
-      return(
-        <Redirect to="/results" />
-      )
+  // renderResults(){
+  //   if(this.state.products) {
+  //     return(
+  //       <div>
+  //         <SearchResults results={this.state.products}/>
+  //         <Redirect to="/results" />
+  //       </div>
+  //     )
       
-    }
-  }
+  //   }
+  // }
 
   render(){
     return (
-      <Router>
-        <div>
-          <Route path="/results" component={SearchResults}></Route>
+      <div className="main-content">
+        <div className="hero">
           <div>
-            <div className="main-content">
-              <div className="hero">
-                <div>
-                <h1>Bitworld Shopper</h1>
-                <h2>A global currency, a world of possibilities...</h2>
-                </div>
-                <div className="what-to-buy">
-                  <h2>What can I buy with bitcoin?</h2>
-                  <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>           
-                </div>
-              </div>
-              {this.renderResults()}        
-            </div>
+          <h1>Bitworld Shopper</h1>
+          <h2>A global currency, a world of possibilities...</h2>
+          </div>
+          <div className="what-to-buy">
+            <h2>What can I buy with bitcoin?</h2>
+            <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+            {this.state.products.map((product, index) => {
+              return <SearchResults product={product} key={index} />
+            })}         
           </div>
         </div>
-      </Router>
+             
+      </div>
     )
   }
 }

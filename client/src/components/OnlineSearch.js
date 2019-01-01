@@ -1,24 +1,28 @@
 import React from 'react';
-import '../styles/OnlineSearch.css'
+import '../styles/OnlineSearch.css';
 import axios from 'axios';
 import SearchForm from './SearchForm'
-import SearchResults from './SearchResults';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import '../styles/OnlineSearch.css';
-import NoResultsFound from './NoResultsFound';
-
+import JwPagination from 'jw-react-pagination';
 
 class OnlineSearch extends React.Component {
   constructor() {
    super();
+
+   this.onChangePage = this.onChangePage.bind(this);
+
    this.state = {
      products: [],
      searchValue: '',
-     noResults: false
-   }
+     noResults: false,
+     pageOfItems: []
+   };
   }
 
+  onChangePage(pageOfItems) {
+    this.setState({ pageOfItems });
+  }
 
   fetchProductData = async () => {
   let { data } = await axios.get(`http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=${this.state.searchValue}`)
@@ -31,10 +35,9 @@ class OnlineSearch extends React.Component {
   }
   console.log(this.state.products);
   if (Array.isArray(this.state.products) && this.state.products.length === 0){
-    console.log(`no results returned: ${this.state.products.length} and ${this.handleSubmit}`);
+    console.log(`no results returned: ${this.state.products.length}`);
   }
   }
-
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -52,9 +55,9 @@ class OnlineSearch extends React.Component {
 
   render(){
     return(
-      <div className='main-online-search'>
+      <div>
         <Navigation />
-        <div>
+        <div className='main-online-search'>
           <div id='main-titles'>
             <h1>bitworld buys</h1>
             <h2>search products worldwide</h2>
@@ -63,13 +66,31 @@ class OnlineSearch extends React.Component {
             <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
           </div>
           <div>
-            {this.state.noResults ? <NoResultsFound /> : null}
+            {this.state.noResults ? <div className='no-results'><p> Your search for "{this.state.searchValue}" returned no results.</p><p>Please check your spelling or enter keywords that are a little less... weird.</p></div> : null}
           </div>
           <div>
-               {this.state.products.map((product, index) => {
-                 return <SearchResults product={product} key={index} />
-               })}
+            {this.state.pageOfItems.map(item =>
+              <div key={item.id}>
+                <div>
+                  <div className="product">
+                    <div id="thumbnail">
+                      <img src={item.thumbnailURL} alt="not available" />
+                    </div>
+                    <div id="product-name">
+                      <a href={item.url}><p>{item.name}</p></a>
+                    </div>
+                    <div className="product-detail">
+                      <p id="product-info">Merchant: {item.merchantName}</p>
+                      <p id="product-info">Price(USD): {item.priceAsString}</p>
+                      <a href={item.url} id="product-info">Buy it with Bitcoin!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            <JwPagination items={this.state.products} onChangePage={this.onChangePage} disableDefaultStyles={true} />
           </div>
+
         </div>
         <Footer />
       </div>

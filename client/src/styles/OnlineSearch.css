@@ -1,3 +1,87 @@
+#thumbnail {
+  height: 7em;
+  width: 7em;
+}
+
+.results-wrapper {
+  height: 100vh;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: ghostwhite;
+  background-size: 80vw;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0.25em 0.25em #5AAEED;
+  border-radius: 1em;
+  padding: 1em;
+  color: #46A8F3;
+  box-sizing: inherit;
+  margin-left: 5em;
+  margin-right: 5em;
+  width: 80%;
+}
+
+.product-detail {
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-right: 1em;
+  margin-left: 1em;
+  padding: 1em;
+  width: 30em;
+  color: #46A8F3;
+}
+
+.product-detail a:hover {
+  color: blue;
+}
+
+#product-name {
+  font-size: 1.5em;
+  text-align: left;
+  padding: 1em;
+  width: 45em;
+}
+
+#product-name a:link {
+  color: #46A8F3;
+}
+
+#product-name a:hover {
+  color: blue;
+}
+
+.pagination {
+  display: flex;
+  align-content: left;
+  justify-content:space-around;
+  margin-right: 5vw;
+  font-size: 2vw;
+}
+
+.pagination a:hover {
+  color: white
+}
+
+.pagination li.active{
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.pagination a{
+  cursor: pointer;
+}
+
+.pagination li.last{
+  display: none
+}
+
 .search-bar {
   width: 60vw;
   margin: auto;
@@ -5,6 +89,7 @@
 
 .main-online-search {
   height: 100%;
+  min-height: 90vh;
   background-image: url('../images/bitglobe.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,4 +113,15 @@
   text-shadow: .025em .025em #5AAEED;
   margin-left: 5vw;
   margin-bottom: 1em;
+}
+
+.no-results {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10vh;
+  color: #E2EEF7;
+  font-size: 3vw;
+  text-shadow: 0.05em 0.05em black;
+  width: 70vw;
 }

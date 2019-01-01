@@ -26,11 +26,11 @@ class LocalSearch extends React.Component {
     console.log(this.state.venues)
   }
 
-  getLocationFromName = () => {
-    Geocode.setApiKey("AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w");
+   getLocationFromName = async () => {
+     Geocode.setApiKey("AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w");
     let city = this.state.searchValue
     console.log(`city:`+city)
-    Geocode.fromAddress(city).then(
+    await Geocode.fromAddress(city).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
         this.setState({

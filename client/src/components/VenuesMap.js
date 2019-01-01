@@ -14,7 +14,7 @@ const VenuesMap = withScriptjs(withGoogleMap((props) => {
       name={venue.name}
     />
   );
-  let counter =+ counter
+  let counter = counter++
   console.log(`props.lat: ` +props.lat)
   console.log(`props.lng: ` +props.lng)
   console.log(`component updated:` +counter)

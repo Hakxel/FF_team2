@@ -43,7 +43,7 @@ const About = () => {
                       </img>
                     </div>
                     <div className='bio'>
-                      <p>Alvaro Vargas is a junior web developer currently expanding his proficiency in HTML, CSS, JavaScript, and React at Wyncode Academy. He is an experienced Program Manager in the field of educational non-profit youth services.
+                      <p>Alvaro Vargas is a junior web developer currently expanding his knowledge in HTML, CSS, JavaScript, and React at Wyncode Academy. He is an experienced Program Manager in the field of educational non-profit youth services.
                       <a href="http://www.linkedin.com/in/alvaro-vargas-910"> Connect with Alvaro.</a></p>
                     </div>
 

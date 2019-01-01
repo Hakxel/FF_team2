@@ -4,6 +4,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(../images/milky-way.jpeg);
+  background-image: url('../images/Vp3BX.jpg');
   background-size: cover;
+}
+
+.main-local-search h1 {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 6vw;
+  text-align: center;
+  color: #E2EEF7;
+  text-shadow: .025em .025em #5AAEED;
+  margin-left: 4vw;
+  margin-bottom: 3vw;
 }

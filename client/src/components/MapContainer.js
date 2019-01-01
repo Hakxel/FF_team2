@@ -14,7 +14,7 @@ class MapContainer extends React.Component {
     this.setState({
       lat: this.props.searchLat,
       lng: this.props.searchLong
-    })  
+    })
   }
   render() {
 
@@ -24,9 +24,9 @@ class MapContainer extends React.Component {
         lat={this.state.lat}
         lng={this.state.lng}
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w&v=3.exp&libraries=geometry,drawing,places`}
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `80vh`, width: `90vw` }} />}
-        mapElement={<div style={{ height: `100%` }} />}        
+        loadingElement={<div style={{ height: `80%` }} />}
+        containerElement={<div style={{ height: `70vh`, width: `80vw` }} />}
+        mapElement={<div style={{ height: `80%` }} />}        
       />
     );
   }

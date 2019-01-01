@@ -36,3 +36,10 @@ class SearchResults extends React.Component {
   }
 }
 export default SearchResults;
+
+// THIS CODE WAS ON THE OnlineSearch PAGE TO RENDER SEARCHRESULTS
+// <div>
+//      {this.state.products.map((product, index) => {
+//        return <SearchResults product={product} key={index} />
+//      })}
+// </div>

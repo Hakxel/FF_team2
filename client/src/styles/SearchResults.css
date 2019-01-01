@@ -56,3 +56,7 @@
 #product-name a:hover {
   color: blue;
 }
+
+.pagination li {
+color: red;
+}

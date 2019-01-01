@@ -20,11 +20,10 @@ class LocalSearch extends React.Component {
   }
 
   async componentDidMount() {
-    let { data } = await axios.get("http://cors-anywhere.herokuapp.com/coinmap.org/api/v1/venues/")
+    let { data } = await axios.get("/localsearch")
     this.setState({
-      venues: data.venues
+      venues: data
     })
-    console.log(this.state.venues)
   }
 
    getLocationFromName =  () => {

@@ -12,8 +12,9 @@ class LocalSearch extends React.Component {
     super()
     this.state = {
       venues: [],
-      locationArr: [],
-      searchValue: ''
+      searchValue: '',
+      cityLat: '',
+      cityLong: ''
     }
   }
 
@@ -28,10 +29,16 @@ class LocalSearch extends React.Component {
   getLocationFromName = () => {
     Geocode.setApiKey("AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w");
     let city = this.state.searchValue
-    Geocode.fromAddress({city}).then(
+    console.log(`city:`+city)
+    Geocode.fromAddress(city).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
-        return ({lat: lat, lng: lng});
+        this.setState({
+          cityLat: lat,
+          cityLong: lng
+        })
+        console.log(`lat:`+this.state.cityLat)
+        console.log(`long` +this.state.cityLong)
       },
       error => {
         console.error("city not found");
@@ -39,15 +46,21 @@ class LocalSearch extends React.Component {
     );
   }
 
-  handleLocalSearch = (event) => {
+  handleLocalSubmit = (event) => {
     event.preventDefault();
+    
+    console.log(`state.searchValue: ` +this.state.searchValue)
     this.getLocationFromName()
+    this.setState({
+      searchValue: ''
+    })
   }
-
+  
   handleLocalSearchChange = (event) => {
     event.preventDefault();
     this.setState({
       searchValue: event.target.value
+      
     })
   }
 
@@ -58,9 +71,9 @@ class LocalSearch extends React.Component {
         <Navigation />
 
         <div className="main-local-search">
-          <SearchLocalForm handleLocalSearch={this.handleLocalSearch} localSearchValue={this.state.localSearchValue} handleLocalSearchChange={this.handleLocalSearchChange}/>
+          <SearchLocalForm onSubmit={this.handleLocalSubmit} localSearchValue={this.state.localSearchValue} handleChange={this.handleLocalSearchChange}/>
           <div className="map-render">
-            <MapContainer venues={this.state.venues} getLocationFromName={this.getLocationFromName}/>
+            <MapContainer venues={this.state.venues} searchLat={this.state.cityLat} searchLong={this.state.cityLong}/>
           </div>
         </div>
 

@@ -21,7 +21,7 @@
 .hero h1 {
   margin-top: 0.5em;
   font-family: 'Oxygen', sans-serif;
-  font-size: 10vw;
+  font-size: 7em;
   text-align: left;
   color: #E2EEF7;
   text-shadow: .015em .015em #5AAEED;
@@ -31,7 +31,7 @@
 
 .hero h2 {
   font-family: 'Oxygen', sans-serif;
-  font-size: 4vw;
+  font-size: 3em;
   text-align: center;
   color: #E2EEF7;
   text-shadow: .025em .025em #5AAEED;
@@ -44,5 +44,5 @@
   background-color:  #5AAEED;
   color: #E2EEF7;
   box-shadow: .05em .05em #E2EEF7;
-  margin: 0.5em;
+  margin: 2em;
 }

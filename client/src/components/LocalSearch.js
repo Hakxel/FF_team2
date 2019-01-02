@@ -12,21 +12,14 @@ import VenuesMap from './VenuesMap';
 const MAPS_KEY = GOOGLE_MAPS_KEY.MAPS_KEY
 
 class LocalSearch extends React.Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
-      venues: [],
+      venues: props.venues,
       searchValue: '',
       cityLat: 42.3601,
       cityLong: -71.0589
     }
-  }
-
-  async componentDidMount() {
-    let { data } = await axios.get("/localsearch")
-    this.setState({
-      venues: data
-    })
   }
 
    getLocationFromName =  () => {

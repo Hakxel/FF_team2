@@ -14,15 +14,15 @@ const VenuesMap = withScriptjs(withGoogleMap((props) => {
       name={venue.name}
     />
   );
-  let counter = counter++
-  console.log(`props.lat: ` +props.lat)
-  console.log(`props.lng: ` +props.lng)
-  console.log(`component updated:` +counter)
+  // let counter = counter++
+  // console.log(`props.lat: ` +props.lat)
+  // console.log(`props.lng: ` +props.lng)
+  // console.log(`component updated:` +counter)
   
   return (
     <GoogleMap
       defaultZoom={14}
-      center={{lat: Number(props.lat), lng: Number(props.lng)}}
+      center={{lat: props.lat, lng: props.lng}}
     >
       {markers}
     </GoogleMap>

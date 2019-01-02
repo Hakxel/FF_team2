@@ -6,16 +6,19 @@ import TextLoop from 'react-text-loop';
 class MainContent extends React.Component {
   constructor(props){
     super()
+    this.state= {
+      homeProps: this.props.homeProps
+    }
   }
 
   searchLocalStores = (event) => {
     event.preventDefault()
-    this.props.homeProps.history.push('/local-search')
+    this.state.homeProps.history.push('/local-search')
   }
 
   searchOnlineStores = (event) => {
     event.preventDefault()
-    this.props.homeProps.history.push('/online-search')
+    this.state.homeProps.history.push('/online-search')
 
   }
 

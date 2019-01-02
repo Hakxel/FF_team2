@@ -75,7 +75,7 @@ class LocalSearch extends React.Component {
         <Navigation />
 
         <div className="main-local-search">
-        <h1>Search Local Retailers</h1>
+        <h1>Find Local Retailers</h1>
           <SearchLocalForm onSubmit={this.handleLocalSubmit} localSearchValue={this.state.localSearchValue} handleChange={this.handleLocalSearchChange}/>
           <div className="map-render">
             <VenuesMap
@@ -84,7 +84,7 @@ class LocalSearch extends React.Component {
               lng={this.state.cityLong}
               googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${MapKey}&v=3.exp&libraries=geometry,drawing,places`}
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `80vh`, width: `90vw` }} />}
+              containerElement={<div style={{ height: `70vh`, width: `70vw` }} />}
               mapElement={<div style={{ height: `100%` }} />} />
           </div>
         </div>

@@ -1,7 +1,7 @@
 .main-local-search {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   background-image: url('../images/Vp3BX.jpg');
@@ -10,10 +10,14 @@
 
 .main-local-search h1 {
   font-family: 'Oxygen', sans-serif;
-  font-size: 6vw;
+  font-size: 4em;
   text-align: center;
   color: #E2EEF7;
   text-shadow: .025em .025em #5AAEED;
   margin-left: 4vw;
-  margin-bottom: 3vw;
+  /* margin-bottom: 1em; */
+}
+
+.main-local-search input {
+  width: 40vw;
 }

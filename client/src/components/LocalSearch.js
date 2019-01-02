@@ -2,11 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import '../styles/LocalSearch.css';
 // import MapContainer from './MapContainer';
+import GOOGLE_MAPS_KEY from '../config'
 import Navigation from './Navigation';
 import Footer from './Footer';
 import SearchLocalForm from './SearchLocalForm';
 import Geocode from 'react-geocode'
 import VenuesMap from './VenuesMap';
+
+const MAPS_KEY = GOOGLE_MAPS_KEY.MAPS_KEY
 
 class LocalSearch extends React.Component {
   constructor(){
@@ -27,7 +30,7 @@ class LocalSearch extends React.Component {
   }
 
    getLocationFromName =  () => {
-     Geocode.setApiKey("AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w");
+    Geocode.setApiKey(MAPS_KEY);
     let city = this.state.searchValue
     console.log(`city:`+city)
     Geocode.fromAddress(city).then(
@@ -77,7 +80,7 @@ class LocalSearch extends React.Component {
               venues={this.state.venues}
               lat={this.state.cityLat}
               lng={this.state.cityLong}
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w&v=3.exp&libraries=geometry,drawing,places`}
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${MAPS_KEY}&v=3.exp&libraries=geometry,drawing,places`}
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `80vh`, width: `90vw` }} />}
               mapElement={<div style={{ height: `100%` }} />} />

@@ -27,18 +27,19 @@ class MainContent extends React.Component {
         {console.log(this.props)}
         <div className="hero">
           <div>
-            <h1>bitworld buys</h1>
+            <h1>Bitworld Buys</h1>
             <h2>the future of {' '}
               <TextLoop interval={3000}>
                   <span>global</span>
                   <span>local</span>
+                  <span>bitcoin</span>
               </TextLoop>
-               {' '}currency. today.
+               {' '}shopping. today.
             </h2>
           </div>
           <div className="store-buttons">
-            <button className="local ui button huge" id="home-buttons" onClick={ this.searchLocalStores }>Shop Local</button>
-            <button className="online ui button huge" id="home-buttons" onClick={ this.searchOnlineStores }>Shop Online</button>
+            <button className="local ui button large" id="home-buttons" onClick={ this.searchLocalStores }>Shop Local</button>
+            <button className="online ui button large" id="home-buttons" onClick={ this.searchOnlineStores }>Shop Online</button>
           </div>
         </div>
       </div>

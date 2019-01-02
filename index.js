@@ -9,12 +9,16 @@ app.get('/', (req, res) => {
   res.sendFile(`${__dirname}/client/index.js`)
 })
 
-let keys = {}
-if (!process.env.PORT) {
-  keys = require('./keys/keys')
-}
+app.get('/localsearch', async (req, res) => {
+  let { data } = await axios.get("http://coinmap.org/api/v1/venues/");
+  res.send(data.venues)
+})
 
-const GOOGLE_MAPS_KEY = process.env.GOOGLE_MAPS_KEY || keys.GOOGLE_MAPS_KEY;
+app.get('/onlinesearch/:productName', async (req, res) => {
+  let product = req.params.productName
+  let { data } = await axios.get("http://spendabit.co/api/v0/go?q=" + product);
+  res.send(data.products)
+})
 
 let PORT = process.env.PORT || 5000
 

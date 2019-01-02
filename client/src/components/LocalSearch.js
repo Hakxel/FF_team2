@@ -51,19 +51,19 @@ class LocalSearch extends React.Component {
 
   handleLocalSubmit = (event) => {
     event.preventDefault();
-    
+
     console.log(`state.searchValue: ` +this.state.searchValue)
     this.getLocationFromName()
     this.setState({
       searchValue: ''
     })
   }
-  
+
   handleLocalSearchChange = (event) => {
     event.preventDefault();
     this.setState({
       searchValue: event.target.value
-      
+
     })
   }
 
@@ -74,9 +74,10 @@ class LocalSearch extends React.Component {
         <Navigation />
 
         <div className="main-local-search">
+        <h1>Search Local Retailers</h1>
           <SearchLocalForm onSubmit={this.handleLocalSubmit} localSearchValue={this.state.localSearchValue} handleChange={this.handleLocalSearchChange}/>
           <div className="map-render">
-            <VenuesMap 
+            <VenuesMap
               venues={this.state.venues}
               lat={this.state.cityLat}
               lng={this.state.cityLong}

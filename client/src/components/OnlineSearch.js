@@ -59,8 +59,8 @@ class OnlineSearch extends React.Component {
         <Navigation />
         <div className='main-online-search'>
           <div id='main-titles'>
-            <h1>bitworld buys</h1>
-            <h2>search products worldwide</h2>
+            <h1></h1>
+            <h2>Search Products Worldwide</h2>
           </div>
           <div>
             <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>

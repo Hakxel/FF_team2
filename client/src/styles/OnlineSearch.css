@@ -3,6 +3,13 @@
   width: 7em;
 }
 
+.carousel {
+  height: 100%;
+  width: 100%;
+  z-index: -1
+
+}
+
 .results-wrapper {
   height: 100vh;
 }
@@ -90,29 +97,30 @@
 .main-online-search {
   height: 100%;
   min-height: 90vh;
-  background-image: url('../images/bitglobe.jpg');
+  background-image: url('../images/artist-impression.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #main-titles h1{
   font-family: 'Oxygen', sans-serif;
-  font-size: 7vw;
-  text-align: left;
+  font-size: 3vw;
+  text-align: right;
   color: #E2EEF7;
   text-shadow: .015em .015em #5AAEED;
-  margin-left: 4vw;
-  margin-right: 5vw;
+  margin-left: 5vw;
+  margin-right: 10vw;
+  padding-top: 5vw;
 }
 
 #main-titles h2{
   font-family: 'Oxygen', sans-serif;
-  font-size: 3vw;
+  font-size: 6vw;
   text-align: center;
   color: #E2EEF7;
   text-shadow: .025em .025em #5AAEED;
-  margin-left: 5vw;
-  margin-bottom: 1em;
+  margin-left: 4vw;
+  margin-bottom: 5vw;
 }
 
 .no-results {

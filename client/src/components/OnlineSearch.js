@@ -25,9 +25,9 @@ class OnlineSearch extends React.Component {
   }
 
   fetchProductData = async () => {
-  let { data } = await axios.get(`http://cors-anywhere.herokuapp.com/spendabit.co/api/v0/go?q=${this.state.searchValue}`)
+  let { data } = await axios.get(`/onlinesearch/${this.state.searchValue}`)
   this.setState({
-    products: data.products,
+    products: data,
     noResults: false
   })
   if(data.products.length === 0){

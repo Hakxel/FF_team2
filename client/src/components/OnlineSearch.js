@@ -77,12 +77,12 @@ class OnlineSearch extends React.Component {
                       <img src={item.thumbnailURL} alt="not available" />
                     </div>
                     <div id="product-name">
-                      <a href={item.url}><p>{item.name}</p></a>
+                      <a href={item.url} target={"_blank"}><p>{item.name}</p></a>
                     </div>
                     <div className="product-detail">
                       <p id="product-info">Merchant: {item.merchantName}</p>
                       <p id="product-info">Price(USD): {item.priceAsString}</p>
-                      <a href={item.url} id="product-info">Buy it with Bitcoin!</a>
+                      <a href={item.url} target={"_blank"} id="product-info">Buy it with Bitcoin!</a>
                     </div>
                   </div>
                 </div>

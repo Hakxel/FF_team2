@@ -27,11 +27,12 @@ class MainContent extends React.Component {
         {console.log(this.props)}
         <div className="hero">
           <div>
-            <h1>Bitworld buys</h1>
+            <h1>Bitworld Buys</h1>
             <h2>the future of {' '}
               <TextLoop interval={3000}>
                   <span>global</span>
                   <span>local</span>
+                  <span>bitcoin</span>
               </TextLoop>
                {' '}shopping. today.
             </h2>

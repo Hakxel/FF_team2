@@ -3,13 +3,6 @@
   width: 7em;
 }
 
-.carousel {
-  height: 100%;
-  width: 100%;
-  z-index: -1
-
-}
-
 .results-wrapper {
   height: 100vh;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import '../styles/LocalSearch.css';
 import GOOGLE_MAPS_KEY from '../config'
-// import MapContainer from './MapContainer';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import SearchLocalForm from './SearchLocalForm';
@@ -23,9 +22,9 @@ class LocalSearch extends React.Component {
   }
 
   async componentDidMount() {
-    let { data } = await axios.get("http://cors-anywhere.herokuapp.com/coinmap.org/api/v1/venues/")
+    let { data } = await axios.get("/localsearch")
     this.setState({
-      venues: data.venues
+      venues: data
     })
     console.log(this.state.venues)
   }

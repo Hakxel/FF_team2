@@ -3,8 +3,8 @@ import axios from 'axios';
 import '../styles/LocalSearch.css';
 import GOOGLE_MAPS_KEY from '../config'
 import Navigation from './Navigation';
+// import SearchLocalForm from './SearchLocalForm';
 import Footer from './Footer';
-import SearchLocalForm from './SearchLocalForm';
 import Geocode from 'react-geocode'
 import VenuesMap from './VenuesMap';
 
@@ -15,7 +15,7 @@ class LocalSearch extends React.Component {
     super()
     this.state = {
       venues: [],
-      searchValue: '',
+      searchValue: "",
       cityLat: 42.3601,
       cityLong: -71.0589
     }
@@ -26,7 +26,6 @@ class LocalSearch extends React.Component {
     this.setState({
       venues: data
     })
-    console.log(this.state.venues)
   }
 
    getLocationFromName =  () => {
@@ -51,19 +50,14 @@ class LocalSearch extends React.Component {
 
   handleLocalSubmit = (event) => {
     event.preventDefault();
-
-    console.log(`state.searchValue: ` +this.state.searchValue)
+    
     this.getLocationFromName()
-    this.setState({
-      searchValue: ''
-    })
   }
 
   handleLocalSearchChange = (event) => {
     event.preventDefault();
     this.setState({
       searchValue: event.target.value
-
     })
   }
 
@@ -75,7 +69,10 @@ class LocalSearch extends React.Component {
 
         <div className="main-local-search">
         <h1>Find Local Retailers</h1>
-          <SearchLocalForm onSubmit={this.handleLocalSubmit} localSearchValue={this.state.localSearchValue} handleChange={this.handleLocalSearchChange}/>
+          <form className="ui input" onSubmit={this.handleLocalSubmit}>
+            <input type="text" placeholder="Enter a city name..." name="local_search" value={this.state.searchValue} onChange={this.handleLocalSearchChange}  />
+            <button className="ui blue button">Search</button>
+          </form>
           <div className="map-render">
             <VenuesMap
               venues={this.state.venues}

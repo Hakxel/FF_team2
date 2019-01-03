@@ -4,6 +4,7 @@ import { withScriptjs, withGoogleMap, GoogleMap} from "react-google-maps";
 import VenuesMarker from "./VenuesMarker";
 
 
+
 const VenuesMap = withScriptjs(withGoogleMap((props) => {
   
   const markers = props.venues.map(venue => 
@@ -14,10 +15,6 @@ const VenuesMap = withScriptjs(withGoogleMap((props) => {
       name={venue.name}
     />
   );
-  let counter = counter++
-  console.log(`props.lat: ` +props.lat)
-  console.log(`props.lng: ` +props.lng)
-  console.log(`component updated:` +counter)
   
   return (
     <GoogleMap

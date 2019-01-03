@@ -1,6 +1,8 @@
 import React from "react";
 import { Marker, InfoWindow } from "react-google-maps";
 import Geocode from 'react-geocode';
+import GOOGLE_MAPS_KEY from '../config'
+const MapKey = GOOGLE_MAPS_KEY.KEY
 
 export default class VenuesMarker extends React.Component {
   constructor(props){
@@ -18,7 +20,7 @@ export default class VenuesMarker extends React.Component {
   }
 
   getAddress = (lat, long) => {
-    Geocode.setApiKey("AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w");
+    Geocode.setApiKey(MapKey);
     Geocode.fromLatLng(lat, long).then(
       response => {
         const addressFromGeo = response.results[0].formatted_address;

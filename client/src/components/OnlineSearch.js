@@ -30,7 +30,7 @@ class OnlineSearch extends React.Component {
     products: data,
     noResults: false
   })
-  if(data.products.length === 0){
+  if(data.length === 0){
     this.setState({noResults: true})
   }
   console.log(this.state.products);

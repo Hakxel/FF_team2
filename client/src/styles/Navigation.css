@@ -11,3 +11,15 @@
 #navigation {
   box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.75);
 }
+
+#logo {
+  width: 3em;
+  height: 3em;
+  margin-left: 2em;
+  align-self: center;
+}
+
+#home-about {
+  margin-right: 3vw;
+  margin-left: 35vw;
+}

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { withScriptjs, withGoogleMap, GoogleMap, InfoWindow} from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap} from "react-google-maps";
 import VenuesMarker from "./VenuesMarker";
 
 
@@ -22,7 +22,7 @@ const VenuesMap = withScriptjs(withGoogleMap((props) => {
   return (
     <GoogleMap
       defaultZoom={14}
-      center={{lat: Number(props.lat), lng: Number(props.lng)}}
+      center={{lat: props.lat, lng: props.lng}}
     >
       {markers}
     </GoogleMap>

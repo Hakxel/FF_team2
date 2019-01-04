@@ -1,6 +1,6 @@
-import React from 'react';
-import '../styles/MainContent.css';
-import TextLoop from 'react-text-loop';
+import React from 'react'
+import '../styles/MainContent.css'
+import TextLoop from 'react-text-loop'
 
 
 class MainContent extends React.Component {

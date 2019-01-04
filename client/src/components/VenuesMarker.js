@@ -1,6 +1,6 @@
-import React from "react";
-import { Marker, InfoWindow } from "react-google-maps";
-import Geocode from 'react-geocode';
+import React from "react"
+import { Marker, InfoWindow } from "react-google-maps"
+import Geocode from 'react-geocode'
 import GOOGLE_MAPS_KEY from '../config'
 const MapKey = GOOGLE_MAPS_KEY.KEY
 
@@ -30,7 +30,7 @@ export default class VenuesMarker extends React.Component {
       error => {
         console.error(error);
       }
-    );
+    )
   }
 
   render() {
@@ -49,6 +49,6 @@ export default class VenuesMarker extends React.Component {
           </div>
         </InfoWindow>}
       </Marker>
-    );
+    )
   }
 }

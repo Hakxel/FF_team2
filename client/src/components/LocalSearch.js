@@ -1,12 +1,11 @@
-import React from 'react';
-import axios from 'axios';
-import '../styles/LocalSearch.css';
+import React from 'react'
+import axios from 'axios'
+import '../styles/LocalSearch.css'
 import GOOGLE_MAPS_KEY from '../config'
-import Navigation from './Navigation';
-// import SearchLocalForm from './SearchLocalForm';
-import Footer from './Footer';
+import Navigation from './Navigation'
+import Footer from './Footer'
 import Geocode from 'react-geocode'
-import VenuesMap from './VenuesMap';
+import VenuesMap from './VenuesMap'
 
 const MapKey = GOOGLE_MAPS_KEY.KEY
 
@@ -45,7 +44,7 @@ class LocalSearch extends React.Component {
       error => {
         console.error("city not found");
       }
-    );
+    )
   }
 
   handleLocalSubmit = (event) => {

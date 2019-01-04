@@ -10,8 +10,6 @@ class OnlineSearch extends React.Component {
   constructor() {
    super();
 
-   this.onChangePage = this.onChangePage.bind(this);
-
    this.state = {
      products: [],
      searchValue: '',
@@ -20,7 +18,7 @@ class OnlineSearch extends React.Component {
    };
   }
 
-  onChangePage(pageOfItems) {
+  onChangePage = (pageOfItems) => {
     this.setState({ pageOfItems });
   }
 

@@ -28,7 +28,6 @@ class OnlineSearch extends React.Component {
   let { data } = await axios.get(`/onlinesearch/${this.state.searchValue}`)
   this.setState({
     products: data,
-    noResults: false
   })
   if(data.length === 0){
     this.setState({noResults: true})

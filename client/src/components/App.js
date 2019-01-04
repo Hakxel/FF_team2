@@ -1,8 +1,8 @@
-import React from 'react';
-import Home from './Home';
-import About from './About';
+import React from 'react'
+import Home from './Home'
+import About from './About'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import OnlineSearch from './OnlineSearch';
+import OnlineSearch from './OnlineSearch'
 import LocalSearch from './LocalSearch'
 
 const App = () => {

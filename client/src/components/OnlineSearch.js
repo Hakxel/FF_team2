@@ -1,34 +1,30 @@
-import React from 'react';
-import '../styles/OnlineSearch.css';
-import axios from 'axios';
+import React from 'react'
+import '../styles/OnlineSearch.css'
+import axios from 'axios'
 import SearchForm from './SearchForm'
-import Navigation from './Navigation';
-import Footer from './Footer';
-import JwPagination from 'jw-react-pagination';
+import Navigation from './Navigation'
+import Footer from './Footer'
+import JwPagination from 'jw-react-pagination'
 
 class OnlineSearch extends React.Component {
   constructor() {
-   super();
-
-   this.onChangePage = this.onChangePage.bind(this);
 
    this.state = {
      products: [],
      searchValue: '',
      noResults: false,
      pageOfItems: []
-   };
+   }
   }
 
-  onChangePage(pageOfItems) {
-    this.setState({ pageOfItems });
+  onChangePage = (pageOfItems) => {
+    this.setState({ pageOfItems })
   }
 
   fetchProductData = async () => {
   let { data } = await axios.get(`/onlinesearch/${this.state.searchValue}`)
   this.setState({
     products: data,
-    noResults: false
   })
   if(data.length === 0){
     this.setState({noResults: true})
@@ -97,4 +93,4 @@ class OnlineSearch extends React.Component {
     )
   }
 }
-export default OnlineSearch;
+export default OnlineSearch

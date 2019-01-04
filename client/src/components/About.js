@@ -14,7 +14,7 @@ const About = () => {
 
            <div className='bio'>
                <p>Virtual currencies like Bitcoin, Ethereum and others are a new and unique way to store value. These crypto-currencies have become increasingly well-known in popular culture, but owners of the currency lack an easy way to search for merchants that accept it. Our application seeks to solve that problem by allowing users to search for products by keyword, rendering a list of merchants where they may use Bitcoin as a method of payment.
-             <a href="https://en.wikipedia.org/wiki/Virtual_currency"> Learn more about virtual currency.</a></p>
+             <a href="https://en.wikipedia.org/wiki/Virtual_currency" target="_blank"> Learn more about virtual currency.</a></p>
           </div>
 
             <h1 id='creators'>Creators</h1>
@@ -29,7 +29,7 @@ const About = () => {
                     </div>
                     <div className='bio'>
                       <p>Asiel Montes is a full-stack web developer familiar with HTML, CSS, JavaScript, GIT, React, Express, Ruby and Rails. Asiel has experience working in the travel/tourism industry as well as in the financial sector. Asiel holds a Bachelor's degree in Translation. His communication skills are excellent and spoken languages include fluency in Spanish, English and French.
-                       <a href="http://www.linkedin.com/in/asiel-montes-27b95612a"> Connect with Asiel.</a></p>
+                       <a href="http://www.linkedin.com/in/asiel-montes-27b95612a" target="_blank"> Connect with Asiel.</a></p>
                     </div>
 
                 </div>
@@ -44,7 +44,7 @@ const About = () => {
                     </div>
                     <div className='bio'>
                       <p>Alvaro Vargas is a junior web developer currently expanding his knowledge in HTML, CSS, JavaScript, and React at Wyncode Academy. He is an experienced Program Manager in the field of educational non-profit youth services.
-                      <a href="http://www.linkedin.com/in/alvaro-vargas-910"> Connect with Alvaro.</a></p>
+                      <a href="http://www.linkedin.com/in/alvaro-vargas-910" target="_blank"> Connect with Alvaro.</a></p>
                     </div>
 
                 </div>
@@ -59,7 +59,7 @@ const About = () => {
                     </div>
                     <div className='bio'>
                       <p>Jamie Damon is a full stack web developer with a background in financial services and client engagement. His current technology experience includes work with HTML, CSS, JavaScript, jQuery, and React. Current and previous work with teams has led to quality results in a project focused agile development environment.
-                      <a href="http://www.linkedin.com/in/jamieldamon"> Connect with Jamie.</a></p>
+                      <a href="http://www.linkedin.com/in/jamieldamon" target="_blank"> Connect with Jamie.</a></p>
                     </div>
 
                 </div>

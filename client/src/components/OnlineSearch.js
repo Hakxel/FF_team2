@@ -7,14 +7,14 @@ import Footer from './Footer'
 import JwPagination from 'jw-react-pagination'
 
 class OnlineSearch extends React.Component {
-  constructor() {
-
-   this.state = {
-     products: [],
-     searchValue: '',
-     noResults: false,
-     pageOfItems: []
-   }
+  constructor(props) {
+    super(props)  
+    this.state = {
+      products: [],
+      searchValue: '',
+      noResults: false,
+      pageOfItems: []
+    }
   }
 
   onChangePage = (pageOfItems) => {

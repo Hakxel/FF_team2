@@ -5751,6 +5751,18 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+jw-paginate@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/jw-paginate/-/jw-paginate-1.0.2.tgz#38cfcb7e6397d828e9353b94d3c7721116f7471d"
+  integrity sha1-OM/LfmOX2CjpNTuU08dyERb3Rx0=
+
+jw-react-pagination@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/jw-react-pagination/-/jw-react-pagination-1.0.7.tgz#2d02d88d090bf68e7805dc4531d2af71f53d01a8"
+  integrity sha512-YQMVxsotIkkV0cwOn+EtH6ITXXEnp9Ewevof6Q9YRVbx1qZKt0tj2rm8BQbese1x+28pNdhBYPDQRZYXu54vdQ==
+  dependencies:
+    jw-paginate "^1.0.2"
+
 keyboard-key@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/keyboard-key/-/keyboard-key-1.0.2.tgz#212e14dde4c2059814336159bbc5acd0a348ca6b"
@@ -8028,6 +8040,13 @@ react-dom@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
+react-easy-swipe@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/react-easy-swipe/-/react-easy-swipe-0.0.16.tgz#5a3d949a8f975d05be92a818254315d1318a81ea"
+  integrity sha1-Wj2Umo+XXQW+kqgYJUMV0TGKgeo=
+  dependencies:
+    prop-types "^15.5.8"
+
 react-error-overlay@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.1.tgz#56f0439f001ff3588da0f479a86482ccb1e708cb"
@@ -8078,6 +8097,15 @@ react-motion@^0.5.2:
     performance-now "^0.2.0"
     prop-types "^15.5.8"
     raf "^3.1.0"
+
+react-responsive-carousel@^3.1.45:
+  version "3.1.47"
+  resolved "https://registry.yarnpkg.com/react-responsive-carousel/-/react-responsive-carousel-3.1.47.tgz#0d1442284e2c45854d81bc2f0c24d0f838d274b6"
+  integrity sha512-mA8ZEUGk5UIFskZTa4Tc3dhs7pln+nHxpoOnUhkprr9xK7BSGBfJcHT+EQIrmVNXGKln8t5kzKv3EaXdIaN/Cg==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+    react-easy-swipe "^0.0.16"
 
 react-router-dom@^4.3.1:
   version "4.3.1"

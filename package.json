@@ -19,7 +19,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "heroku-postbuild": "cd client && yarn install && yarn build"
+    "heroku-postbuild": "cd client && yarn install"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"

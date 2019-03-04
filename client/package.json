@@ -1,5 +1,6 @@
 {
   "name": "bitworld-buys",
+  "homepage": "https://bitworld-buys.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

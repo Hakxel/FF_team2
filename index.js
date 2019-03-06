@@ -5,10 +5,6 @@ const app = express();
 
 app.use(express.static(__dirname + 'client/build'));
 
-app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/client/index.js`)
-})
-
 app.get('/localsearch', async (req, res) => {
   let { data } = await axios.get("http://coinmap.org/api/v1/venues/");
   res.send(data.venues)

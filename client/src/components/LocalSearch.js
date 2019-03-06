@@ -7,7 +7,12 @@ import Footer from './Footer'
 import Geocode from 'react-geocode'
 import VenuesMap from './VenuesMap'
 
-const MapKey = GOOGLE_MAPS_KEY.KEY
+const MapKey
+if (!process.env.PORT) {
+  MapKey = process.env.GOOGLE_KEY
+} else {
+  MapKey = GOOGLE_MAPS_KEY.KEY
+}
 
 class LocalSearch extends React.Component {
   constructor(){

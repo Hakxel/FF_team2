@@ -4,7 +4,7 @@ const path = require('path')
 
 const app = express();
 
-app.use(express.static(path.join(__dirname + 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/localsearch', async (req, res) => {
   let { data } = await axios.get("http://coinmap.org/api/v1/venues/");

@@ -21,7 +21,9 @@ class LocalSearch extends React.Component {
   }
 
   async componentDidMount() {
-    let { data } = await axios.get("/localsearch")
+    let {
+      data
+    } = await axios.get("https://bitworld-buys.herokuapp.com/localsearch")
     this.setState({
       venues: data
     })

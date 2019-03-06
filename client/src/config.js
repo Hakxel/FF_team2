@@ -1,3 +1,3 @@
-const GOOGLE_KEY = "AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w"
+const GOOGLE_KEY = "AIzaSyDI4ehLcX46jd2s1a7FOEIRFtncOyWhyGU"
 
 module.exports.KEY = GOOGLE_KEY

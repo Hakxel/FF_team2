@@ -3,7 +3,6 @@ import { Marker, InfoWindow } from "react-google-maps"
 import Geocode from 'react-geocode'
 
 const MAPKEY = process.env.REACT_APP_GOOGLE_KEY
-console.log(MAPKEY)
 
 export default class VenuesMarker extends React.Component {
   constructor(props){

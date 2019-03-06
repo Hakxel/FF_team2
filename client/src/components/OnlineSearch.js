@@ -24,7 +24,7 @@ class OnlineSearch extends React.Component {
   fetchProductData = async () => {
   let {
     data
-  } = await axios.get(`https://bitworld-buys.herokuapp.com/onlinesearch/${this.state.searchValue}`)
+  } = await axios.get(`/onlinesearch/${this.state.searchValue}`)
   this.setState({
     products: data,
   })

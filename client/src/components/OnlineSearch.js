@@ -8,7 +8,7 @@ import JwPagination from 'jw-react-pagination'
 
 class OnlineSearch extends React.Component {
   constructor(props) {
-    super(props)  
+    super(props)
     this.state = {
       products: [],
       searchValue: '',
@@ -68,8 +68,8 @@ class OnlineSearch extends React.Component {
               <div key={item.id}>
                 <div>
                   <div className="product">
-                    <div id="thumbnail">
-                      <img src={item.thumbnailURL} alt="not available" />
+                    <div>
+                      <img src={item.thumbnailURL} alt="not available" width={100} height={100} />
                     </div>
                     <div id="product-name">
                       <a href={item.url} target={"_blank"}><p>{item.name}</p></a>

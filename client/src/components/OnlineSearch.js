@@ -55,7 +55,6 @@ class OnlineSearch extends React.Component {
         <Navigation />
         <div className='main-online-search'>
           <div id='main-titles'>
-            <h1></h1>
             <h2>Search Products Worldwide</h2>
           </div>
           <div>

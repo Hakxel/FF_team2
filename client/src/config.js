@@ -1,3 +1,0 @@
-const GOOGLE_KEY = "AIzaSyDbO74TKJ17IJHpBJ9Q9IQu3BOY4LooR5w"
-
-module.exports.KEY = GOOGLE_KEY

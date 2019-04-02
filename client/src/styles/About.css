@@ -1,6 +1,7 @@
-.all-about{
+.about{
   background-image: url('../images/bitglobe.jpg');
-  background-repeat: repeat-y;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: #cccccc;
   font: Arial sans-serif;
   font-size: 20px;
@@ -13,16 +14,16 @@
   margin-left: 90px;
 }
 
-.bio a{
+.content a{
   color: orange;
 }
 
-#creators{
+#creators, .intro{
   margin-bottom: 50px;
-  text-shadow: 2px 2px 4px #00000;
+  text-shadow: 2px 2px 4px black;
 }
 
-.About-Main{
+.about-main{
   display: flex;
   justify-content: center;
   flex-flow: column;
@@ -49,7 +50,7 @@
   border-radius: 25px;
 }
 
-.bio{
+.content{
   color: ghostwhite;
   text-shadow: 2px 2px 4px #000000;
   display: flex;
@@ -61,7 +62,6 @@
   background-color: #2185d0;
   padding: 10px;
   border-radius: 25px;
-  /* box-shadow: 10px 10px 5px black; */
   box-shadow: 1px 1px 3px 3px #FFFFFF;
   text-align: justify;
 }

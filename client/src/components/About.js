@@ -9,7 +9,7 @@ const About = () => {
       <Navigation></Navigation>
       <div className='about-main'>
         <h1 className='intro'>An introduction to our project</h1>
-        <div className='content'>
+        <div className='intro-content'>
           <p>Virtual currencies like Bitcoin, Ethereum and others are a new and unique way to store value. These crypto-currencies have become increasingly well-known in popular culture, but owners of the currency lack an easy way to search for merchants that accept it. Our application seeks to solve that problem by allowing users to search for both online products and physical stores where Bitcoin is a valid method of payment. <a href="https://en.wikipedia.org/wiki/Virtual_currency"
           target="_blank" rel="noopener noreferrer" >Learn more about virtual currency.</a></p>
         </div>

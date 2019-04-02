@@ -16,17 +16,13 @@ class MainContent extends React.Component {
   searchOnlineStores = (event) => {
     event.preventDefault()
     this.props.homeProps.history.push('/online-search')
-
   }
-
-
 
   render(){
     return (
       <div className="main-content">
-        {console.log(this.props)}
         <div className="hero">
-          <div>
+          <div className="hero-text">
             <h1>Bitworld Buys</h1>
             <h2>the future of {' '}
               <TextLoop interval={3000}>
@@ -38,13 +34,14 @@ class MainContent extends React.Component {
             </h2>
           </div>
           <div className="store-buttons">
-            <button className="local ui button large" id="home-buttons" onClick={ this.searchLocalStores }>Shop Local</button>
-            <button className="online ui button large" id="home-buttons" onClick={ this.searchOnlineStores }>Shop Online</button>
+            <div className="buttons-wrapper">
+              <button className="local ui button large" id="home-buttons" onClick={ this.searchLocalStores }>Shop Local</button>
+              <button className="online ui button large" id="home-buttons" onClick={ this.searchOnlineStores }>Shop Online</button>            
+            </div>
           </div>
         </div>
       </div>
     )
-
   }
 }
 

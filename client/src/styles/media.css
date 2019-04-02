@@ -61,4 +61,8 @@
     margin: 10px;
   }
 
+  /* LocalSearch ************************** */
+  .main-local-search h1 {
+    font-size: 2em;
+  }
 }

@@ -1,5 +1,72 @@
+.main-online-search {
+  height: 100%;
+  min-height: 90vh;
+  background-image: url('../images/artist-impression.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-title h2{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 5em;
+  text-align: center;
+  color: #E2EEF7;
+  text-shadow: .025em .025em #5AAEED;
+  margin-bottom: 5vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  padding-top: 5vh;
+}
+
+.search-bar {
+  width: 60vw;
+  margin: auto;
+}
+
+/* #main-titles h1{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 3vw;
+  text-align: right;
+  color: #E2EEF7;
+  text-shadow: .015em .015em #5AAEED;
+  margin-left: 5vw;
+  margin-right: 10vw;
+  padding-top: 5vw;
+} */
+
 .results-wrapper {
-  height: 100vh;
+  margin-top: 5rem;
+}
+
+.no-results {
+  background-color: ghostwhite;
+  /* background-size: 80vw; */
+  margin-top: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0.25em 0.25em #5AAEED;
+  color: #46A8F3;
+  padding: 1em;
+  border-radius: 1em;
+  border-radius: 1em;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10vh;
+  background-color: ghostwhite;
+  font-size: 2rem;
+  width: 70vw;
+}
+
+.product-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding: 10px;
+  widows: 100vw;
 }
 
 .product {
@@ -7,9 +74,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
   background-color: ghostwhite;
-  background-size: 80vw;
   margin-top: 1em;
   margin-bottom: 1em;
   box-shadow: 0.25em 0.25em #5AAEED;
@@ -17,8 +82,7 @@
   padding: 1em;
   color: #46A8F3;
   box-sizing: inherit;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin: auto;
   width: 80%;
 }
 
@@ -37,35 +101,55 @@
   color: blue;
 }
 
-#product-name {
+.product-name {
   font-size: 1.5em;
   text-align: left;
   padding: 1em;
   width: 45em;
 }
 
-#product-name a:link {
+.product-name a:link {
   color: #46A8F3;
 }
 
-#product-name a:hover {
+.product-name a:hover {
   color: blue;
+}
+
+.pagination-wrapper {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .pagination {
   display: flex;
-  align-content: left;
-  justify-content:space-around;
-  margin-right: 5vw;
-  font-size: 2vw;
+  align-self: center;
+  margin: auto;
+  justify-content:space-between;
+  font-size: 1.5rem;
+  padding: 0px;
+  width: 100%
+}
+
+.pagination a {
+  list-style: none;
+}
+
+.pagination li {
+  list-style: none;  
 }
 
 .pagination a:hover {
-  color: white
+  color: white;
+  
 }
 
 .pagination li.active{
-  font-size: 3vw;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -77,56 +161,4 @@
   display: none
 }
 
-.search-bar {
-  width: 60vw;
-  margin: auto;
-}
 
-.main-online-search {
-  height: 100%;
-  min-height: 90vh;
-  background-image: url('../images/artist-impression.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#main-titles h1{
-  font-family: 'Oxygen', sans-serif;
-  font-size: 3vw;
-  text-align: right;
-  color: #E2EEF7;
-  text-shadow: .015em .015em #5AAEED;
-  margin-left: 5vw;
-  margin-right: 10vw;
-  padding-top: 5vw;
-}
-
-#main-titles h2{
-  font-family: 'Oxygen', sans-serif;
-  font-size: 5em;
-  text-align: center;
-  color: #E2EEF7;
-  text-shadow: .025em .025em #5AAEED;
-  margin-left: 4vw;
-  margin-bottom: 5vw;
-}
-
-.no-results {
-  background-color: ghostwhite;
-  background-size: 80vw;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  box-shadow: 0.25em 0.25em #5AAEED;
-  color: #46A8F3;
-  padding: 1em;
-
-  border-radius: 1em;
-  border-radius: 1em;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10vh;
-  background-color: ghostwhite;
-  font-size: 2vw;
-  width: 70vw;
-}

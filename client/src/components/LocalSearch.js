@@ -78,7 +78,7 @@ class LocalSearch extends React.Component {
               lng={this.state.cityLong}
               googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${MAPKEY}&v=3.exp&libraries=geometry,drawing,places`}
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `70vh`, width: `70vw` }} />}
+              containerElement={<div className="map-container" style={{ height: `70vh`, width: `80vw` }} />}
               mapElement={<div style={{ height: `100%` }} />} />
           </div>
         </div>

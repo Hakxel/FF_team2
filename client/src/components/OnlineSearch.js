@@ -29,10 +29,10 @@ class OnlineSearch extends React.Component {
   if(data.length === 0){
     this.setState({noResults: true})
   }
-  console.log(this.state.products);
-  if (Array.isArray(this.state.products) && this.state.products.length === 0){
-    console.log(`no results returned: ${this.state.products.length}`);
-  }
+  // console.log(this.state.products);
+  // if (Array.isArray(this.state.products) && this.state.products.length === 0){
+  //   console.log(`no results returned: ${this.state.products.length}`);
+  // }
   }
 
   handleSubmit = (event) => {
@@ -46,6 +46,7 @@ class OnlineSearch extends React.Component {
     event.preventDefault();
     this.setState({
       searchValue: event.target.value,
+      noResults: false,
     })
   }
 
@@ -54,24 +55,24 @@ class OnlineSearch extends React.Component {
       <div>
         <Navigation />
         <div className='main-online-search'>
-          <div id='main-titles'>
+          <div className='main-title'>
             <h2>Search Products Worldwide</h2>
           </div>
           <div>
             <SearchForm onSubmit={this.handleSubmit} searchValue={this.state.searchValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
           </div>
           <div>
-            {this.state.noResults ? <div className='no-results'><p> Your search for "{this.state.searchValue}" returned no results.</p><p>Please check your spelling or enter keywords that are a little less... weird.</p></div> : null}
+            {this.state.noResults ? <div className='no-results'><p> Your search for "{this.state.searchValue}" returned no results.</p><p>Please check your spelling or enter more common keywords.</p></div> : null}
           </div>
-          <div>
+          <div className="results-wrapper">
             {this.state.pageOfItems.map(item =>
               <div key={item.id}>
-                <div>
+                <div className="product-container">
                   <div className="product">
-                    <div>
+                    <div className="product-image">
                       <img src={item.thumbnailURL} alt="not available" width={100} height={100} />
                     </div>
-                    <div id="product-name">
+                    <div className="product-name">
                       <a href={item.url} target={"_blank"}><p>{item.name}</p></a>
                     </div>
                     <div className="product-detail">
@@ -83,9 +84,10 @@ class OnlineSearch extends React.Component {
                 </div>
               </div>
             )}
+          </div>
+          <div className="pagination-wrapper">
             <JwPagination items={this.state.products} onChangePage={this.onChangePage} disableDefaultStyles={true} />
           </div>
-
         </div>
         <Footer />
       </div>

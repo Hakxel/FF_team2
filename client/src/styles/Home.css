@@ -1,6 +1,11 @@
+article {
+  box-sizing: content-box;
+  height: auto;
+  width: 100vw;
+}
+
 .home {
   background-color: ghostwhite;
-
 }
 
 .main-wrapper {

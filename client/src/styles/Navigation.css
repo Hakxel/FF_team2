@@ -2,24 +2,27 @@
   height: 8vh;
   margin-bottom: 0%;
   position: relative;
-}
-
-#navigation .item {
-  margin: 0 auto;
-}
-
-#navigation {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.75);
+}
+
+.logo-wrapper {
+  display: flex;
+  align-content: center;
 }
 
 #logo {
   width: 3em;
   height: 3em;
-  margin-left: 2em;
-  align-self: center;
+  margin-left: 1rem;
 }
 
-#home-about {
-  margin-right: 3vw;
-  margin-left: 35vw;
+.home-about {
+  display: flex;
+  justify-self: center;
+  width: 12rem;
+  margin-left: -5vw;
 }
